@@ -1,54 +1,122 @@
-# React + TypeScript + Vite
+# 📝 Formulário Interativo com React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um formulário interativo criado com **Vite**, **React** e **TypeScript**, que valida campos de entrada, armazena dados temporariamente no `LocalStorage`, e inclui uma tela de login simples.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✅ Funcionalidades
 
-## Expanding the ESLint configuration
+- ✅ Validação de e-mail válido (ex: `email@email.com`)
+- ✅ Validação obrigatória de todos os campos
+- ✅ Mensagens de erro por campo (ex: idade inválida como “quarenta” ou “43,5”)
+- ✅ Campos de ID do usuário e senha
+- ✅ Armazenamento temporário via `LocalStorage`
+- ✅ Tela de login com validação baseada no formulário anterior
+- ✅ Botão de salvar formulário
+- ✅ Exibição de mensagem de confirmação de inscrição
+- ✅ Layout responsivo (mobile, tablet e desktop)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Tecnologias Utilizadas
+
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) (opcional para estilização)
+
+---
+
+## ⚙️ Pré-requisitos
+
+- Node.js (versão 16 ou superior)
+- npm ou yarn
+
+---
+
+## 📦 Como Inicializar o Projeto
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/seu-usuario/seu-repo.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Instale as dependências
+- Com npm:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+## Inicie o servidor de desenvolvimento
+
+- basta rodar
+```bash
+npm run dev
+```
+### Acesse no navegador
+Abra http://localhost:5173 para ver o projeto em execução.
+Ctrl click do mouse
+
+
+## 🧪 Como Usar
+Acesse a página do formulário.
+
+Preencha todos os campos:
+
+Nome
+
+E-mail
+
+Idade (somente número inteiro)
+
+ID do usuário
+
+Senha
+
+Clique no botão Salvar.
+
+O formulário será validado e salvo temporariamente no LocalStorage.
+
+Uma mensagem de sucesso será exibida.
+
+Vá até a tela de login e use o ID do usuário e a senha para autenticar.
+
+## 🧠 Validações Implementadas
+Email:
+
+Deve conter “@” e “.” no formato válido.
+
+Ex: joao@gmail.com é válido; joaogmail não é.
+
+Idade:
+
+Aceita apenas números inteiros (ex: 25)
+
+Inválido: 25,3 ou vinte
+
+Obrigatoriedade:
+
+Nenhum campo pode estar vazio.
+
+## 📁 Estrutura de Diretórios
+css
+Copiar
+Editar
+📦src
+ ┣ 📜main.tsx
+ ┣ 📜App.tsx
+ ┣ 📂pages
+ ┃ ┣ 📜Formulario.tsx
+ ┃ ┗ 📜Login.tsx
+   ┗ 📜Register.tsx
+ 
+
+ ## 📌 Observações
+Este projeto é didático e pode ser adaptado para incluir autenticação real com backend.
+
+Os dados são salvos apenas temporariamente no navegador (via LocalStorage).
+
+O sistema de login simula uma autenticação simples com base nos dados salvos no formulário.
+
